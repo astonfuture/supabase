@@ -56,7 +56,7 @@ const Subscription = ({}: SubscriptionProps) => {
                 This organization uses the legacy project-based billing. We’ve recently made some
                 big improvements to our billing system. To migrate to the new organization-based
                 billing, head over to your{' '}
-                <Link href={`/org/${organization?.slug}/billing`}>
+                <Link href={`/org/${organization?.slug}/billing`} passHref>
                   <a className="text-sm text-green-900 transition hover:text-green-1000">
                     organization billing settings
                   </a>

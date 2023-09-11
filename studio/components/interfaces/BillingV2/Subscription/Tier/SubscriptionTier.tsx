@@ -45,8 +45,8 @@ const SubscriptionTier = ({}: SubscriptionTierProps) => {
                 <a className="text-sm text-green-900 transition hover:text-green-1000">
                   organization settings
                 </a>
-                .
               </Link>
+              .
             </div>
             <div className="space-y-2">
               <p className="text-sm text-scale-1100">More information</p>

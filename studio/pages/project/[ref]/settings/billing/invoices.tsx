@@ -56,7 +56,7 @@ const Settings = () => {
                   This organization uses the legacy project-based billing. We’ve recently made some
                   big improvements to our billing system. To migrate to the new organization-based
                   billing, head over to your{' '}
-                  <Link href={`/org/${selectedOrganization?.slug}/billing`}>
+                  <Link href={`/org/${selectedOrganization?.slug}/billing`} passHref>
                     <a className="text-sm text-green-900 transition hover:text-green-1000">
                       organization billing settings
                     </a>
@@ -89,12 +89,12 @@ const Settings = () => {
 
         <div className="text-sm text-scale-1000">
           To manage your billing address, emails or Tax ID, head to your{' '}
-          <Link href={`/org/${orgSlug}/billing`}>
+          <Link href={`/org/${orgSlug}/billing`} passHref>
             <a className="text-sm text-green-900 transition hover:text-green-1000">
               organization settings
             </a>
-            .
           </Link>
+          .
         </div>
 
         <Invoices />
