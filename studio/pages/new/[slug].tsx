@@ -591,7 +591,7 @@ const Wizard: NextPageWithLayout = () => {
                     <div className="space-y-3">
                       <p className="text-sm leading-normal">
                         This organization uses the legacy project-based billing. We’ve recently made
-                        some big improvements to our billing system. To opt-in to the new
+                        some big improvements to our billing system. To migrate to the new
                         organization-based billing, head over to your{' '}
                         <Link href={`/org/${slug}/billing`}>
                           <a>
