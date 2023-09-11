@@ -36,11 +36,8 @@ const NoProjectsOnPaidOrgInfo = ({ organization }: NoProjectsOnPaidOrgInfoProps)
           The monthly fees for the paid plan still apply. To cancel your subscription, head over to
           your{' '}
           <Link href={`/org/${organization?.slug}/billing`}>
-            <a>
-              <span className="text-sm text-green-900 transition hover:text-green-1000">
-                organization billing settings
-              </span>
-              .
+            <a className="text-sm text-green-900 transition hover:text-green-1000">
+              organization billing settings .
             </a>
           </Link>
         </div>

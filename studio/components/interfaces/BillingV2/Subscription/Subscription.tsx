@@ -49,7 +49,7 @@ const Subscription = ({}: SubscriptionProps) => {
           icon={<IconInfo size="large" strokeWidth={1.5} />}
           defaultVisibility={true}
           hideCollapse
-          title="Legacy Billing"
+          title="We're upgrading our billing system"
           description={
             <div className="space-y-3">
               <p className="text-sm leading-normal">
@@ -57,29 +57,27 @@ const Subscription = ({}: SubscriptionProps) => {
                 big improvements to our billing system. To migrate to the new organization-based
                 billing, head over to your{' '}
                 <Link href={`/org/${organization?.slug}/billing`}>
-                  <a>
-                    <span className="text-sm text-green-900 transition hover:text-green-1000">
-                      organization billing settings
-                    </span>
+                  <a className="text-sm text-green-900 transition hover:text-green-1000">
+                    organization billing settings
                   </a>
                 </Link>
                 .
               </p>
 
               <div className="space-x-3">
-                <Link href="https://supabase.com/blog/organization-based-billing">
-                  <a target="_blank" rel="noreferrer">
-                    <Button type="default" icon={<IconExternalLink strokeWidth={1.5} />}>
+                <Link href="https://supabase.com/blog/organization-based-billing" passHref>
+                  <Button asChild type="default" icon={<IconExternalLink strokeWidth={1.5} />}>
+                    <a target="_blank" rel="noreferrer">
                       Announcement
-                    </Button>
-                  </a>
+                    </a>
+                  </Button>
                 </Link>
-                <Link href="https://supabase.com/docs/guides/platform/org-based-billing">
-                  <a target="_blank" rel="noreferrer">
-                    <Button type="default" icon={<IconExternalLink strokeWidth={1.5} />}>
+                <Link href="https://supabase.com/docs/guides/platform/org-based-billing" passHref>
+                  <Button asChild type="default" icon={<IconExternalLink strokeWidth={1.5} />}>
+                    <a target="_blank" rel="noreferrer">
                       Documentation
-                    </Button>
-                  </a>
+                    </a>
+                  </Button>
                 </Link>
               </div>
             </div>

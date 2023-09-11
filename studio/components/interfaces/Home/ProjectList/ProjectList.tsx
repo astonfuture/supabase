@@ -162,44 +162,40 @@ const OrganizationProjects = ({
         size="small"
         visible={orgBillingMigrationModalVisible}
         onCancel={() => setOrgBillingMigrationModalVisible(false)}
-        header="Legacy-Billing"
+        header="We're upgrading our billing system"
       >
-        <div className="py-4 space-y-4">
-          <Modal.Content>
-            <div className="space-y-3">
-              <p className="text-sm leading-normal">
-                The organization "{name}" still uses the legacy project-based billing. We've
-                recently made some big improvements to our billing system and require your action.
-                To migrate to the new organization-based billing, head over to your{' '}
-                <Link href={`/org/${slug}/billing`}>
-                  <a>
-                    <span className="text-sm text-green-900 transition hover:text-green-1000">
-                      organization billing settings
-                    </span>
-                  </a>
-                </Link>
-                .
-              </p>
+        <Modal.Content className="py-4 space-y-4">
+          <div className="space-y-3">
+            <p className="text-sm leading-normal">
+              The organization "{name}" still uses the legacy project-based billing. We've recently
+              made some big improvements to our billing system and require your action. To migrate
+              to the new organization-based billing, head over to your{' '}
+              <Link href={`/org/${slug}/billing`} passHref>
+                <a className="text-sm text-green-900 transition hover:text-green-1000">
+                  organization billing settings
+                </a>
+              </Link>
+              .
+            </p>
 
-              <div className="space-x-3">
-                <Link href="https://supabase.com/blog/organization-based-billing">
+            <div className="space-x-3">
+              <Link href="https://supabase.com/blog/organization-based-billing" passHref>
+                <Button asChild type="default" icon={<IconExternalLink strokeWidth={1.5} />}>
                   <a target="_blank" rel="noreferrer">
-                    <Button type="default" icon={<IconExternalLink strokeWidth={1.5} />}>
-                      Announcement
-                    </Button>
+                    Announcement
                   </a>
-                </Link>
-                <Link href="https://supabase.com/docs/guides/platform/org-based-billing">
+                </Button>
+              </Link>
+              <Link href="https://supabase.com/docs/guides/platform/org-based-billing" passHref>
+                <Button asChild type="default" icon={<IconExternalLink strokeWidth={1.5} />}>
                   <a target="_blank" rel="noreferrer">
-                    <Button type="default" icon={<IconExternalLink strokeWidth={1.5} />}>
-                      Documentation
-                    </Button>
+                    Documentation
                   </a>
-                </Link>
-              </div>
+                </Button>
+              </Link>
             </div>
-          </Modal.Content>
-        </div>
+          </div>
+        </Modal.Content>
       </Modal>
     </div>
   )

@@ -336,55 +336,53 @@ const PlanUpdateSidePanel = () => {
                 }
                 hideCollapse={false}
                 description={
-                  <div>
-                    <table className="w-full">
-                      <thead>
-                        <tr className="border-b">
-                          <th className="py-2 font-normal text-left text-sm text-scale-1000 w-1/2">
-                            Item
-                          </th>
-                          <th className="py-2 font-normal text-left text-sm text-scale-1000">
-                            Count
-                          </th>
-                          <th className="py-2 font-normal text-left text-sm text-scale-1000">
-                            Unit Price
-                          </th>
-                          <th className="py-2 font-normal text-right text-sm text-scale-1000">
-                            Price
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {subscriptionPreview.breakdown.map((item) => (
-                          <tr key={item.description} className="border-b">
-                            <td className="py-2 text-sm">{item.description ?? 'Unknown'}</td>
-                            <td className="py-2 text-sm">{item.quantity}</td>
-                            <td className="py-2 text-sm">
-                              {item.unit_price === 0 ? 'FREE' : `$${item.unit_price}`}
-                            </td>
-                            <td className="py-2 text-sm text-right">${item.total_price}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-
-                      <tbody>
-                        <tr>
-                          <td className="py-2 text-sm">Total</td>
-                          <td className="py-2 text-sm" />
-                          <td className="py-2 text-sm" />
-                          <td className="py-2 text-sm text-right">
-                            $
-                            {Math.round(
-                              subscriptionPreview.breakdown.reduce(
-                                (prev, cur) => prev + cur.total_price,
-                                0
-                              )
-                            ) ?? 0}
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="py-2 font-normal text-left text-sm text-scale-1000 w-1/2">
+                          Item
+                        </th>
+                        <th className="py-2 font-normal text-left text-sm text-scale-1000">
+                          Count
+                        </th>
+                        <th className="py-2 font-normal text-left text-sm text-scale-1000">
+                          Unit Price
+                        </th>
+                        <th className="py-2 font-normal text-right text-sm text-scale-1000">
+                          Price
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {subscriptionPreview.breakdown.map((item) => (
+                        <tr key={item.description} className="border-b">
+                          <td className="py-2 text-sm">{item.description ?? 'Unknown'}</td>
+                          <td className="py-2 text-sm">{item.quantity}</td>
+                          <td className="py-2 text-sm">
+                            {item.unit_price === 0 ? 'FREE' : `$${item.unit_price}`}
                           </td>
+                          <td className="py-2 text-sm text-right">${item.total_price}</td>
                         </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                      ))}
+                    </tbody>
+
+                    <tbody>
+                      <tr>
+                        <td className="py-2 text-sm">Total</td>
+                        <td className="py-2 text-sm" />
+                        <td className="py-2 text-sm" />
+                        <td className="py-2 text-sm text-right">
+                          $
+                          {Math.round(
+                            subscriptionPreview.breakdown.reduce(
+                              (prev, cur) => prev + cur.total_price,
+                              0
+                            )
+                          ) ?? 0}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 }
               />
 
